@@ -1,15 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
       <header className="App-header">
-      <h2>¡Bienvenidos a la tienda Music Box!</h2>
-      <p>Espacio en Construcción</p>
-      <img src='logo192.png'></img>
+        <ItemListContainer title='Guitarra' text='Nueva guitarra Acústica'/>
       </header>
     </div>
   );
