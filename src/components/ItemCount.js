@@ -30,7 +30,7 @@ function ItemCount(props) {
 
         const OnAdd= () => {
                 if(count !== 0)
-                console.log("Se añadieron al carrito", {count})
+                alert(`Se añadieron al carrito ${count} productos`)
               }
 
         return(
