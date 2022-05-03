@@ -37,17 +37,17 @@ function ItemCount(props) {
         <>
        <div className="flex flex-col items-center">
         <div>
-                <button onClick={botonResta} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+                <button onClick={botonResta} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-3 rounded-l">
                         -
                 </button>
-                <button className="bg-gray-400 hover:bg-gray-400 text-gray-800 font-bold py-2 px-2">
+                <button className="bg-gray-400 hover:bg-gray-400 text-gray-800 font-bold py-1 px-9">
                         {count}
                 </button>
-                <button onClick={botonSuma}  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+                <button onClick={botonSuma}  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-3 rounded-r">
                         +
                 </button>
         </div>
-        <button onClick={OnAdd} className="btn btn-secondary m-4">¡Lo quiero!</button>
+        <button onClick={OnAdd} className="btn btn-secondary m-4 p-2">Agregar al carrito</button>
     </div>
     </>
   )
