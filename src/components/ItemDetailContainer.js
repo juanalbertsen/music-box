@@ -23,7 +23,7 @@ const ItemDetailContainer = (props) => {
   
         getItemsfromDBPromise.then( data => {
           console.log("estoy escribiendo", data[0]);
-          setItem(data[props.idnumber]);
+          setItem(data.find(item =>item.id == 3)); //acá esta hardcodeado en el id 3! Luego cambiará
           console.log(item);
           
 
