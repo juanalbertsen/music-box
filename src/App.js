@@ -10,7 +10,7 @@ function App() {
      <div>
     <NavBar/>
     <ItemListContainer/>
-    <ItemDetailContainer idnumber={2}/>
+    <ItemDetailContainer/>
 
    
 
