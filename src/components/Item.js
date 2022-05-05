@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 import ItemDetail from './ItemDetail'
 import ItemDetailContainer from './ItemDetailContainer'
@@ -20,7 +21,7 @@ const onClickHandler = (evt => {
           <img src={item.imgurl} className="object-cover h-40 w-40 rounded-md"/>
           <strong>${item.price}</strong>
           <div className="flex-col card-actions items-center">
-            <button onClick={onClickHandler} id={item.id} className="btn btn-secondary m-4">Ver Detalles</button>
+            <Link id={item.id} className="btn btn-secondary m-4" to={`/item/${item.id}`}>Ver detalles</Link>
           </div>
         </div>
       </div>
