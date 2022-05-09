@@ -5,7 +5,7 @@ import Item from './Item'
 import ItemDetail from './ItemDetail'
 
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({})
 
@@ -26,7 +26,7 @@ const ItemDetailContainer = (props) => {
   
         getItemsfromDBPromise.then( data => {
           console.log("estoy escribiendo", data[0]);
-          setItem(data.find(item =>item.id == idParam)); //acá esta hardcodeado en el id 3! Luego cambiará
+          setItem(data.find(item =>item.id == idParam)); 
           console.log(item);
           
 

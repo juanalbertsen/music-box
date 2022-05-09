@@ -1,20 +1,19 @@
 import React from 'react'
 import {useState} from "react";
 
-function ItemCount(props) {
+function ItemCount({stock, onAdd}) {
 
         console.log("se montó el contador")
         const [count, setCount] = useState(0)
 
 
         const botonSuma = () =>{
-                console.log(props)
-                if(count < props.stock){
+                console.log(stock)
+                if(count < stock){
                 console.log('se está sumando');
                 setCount(count + 1)
                 }else{
                 console.log('Alcanzó el límite de stock');
-
                 }
         }
         const botonResta = () =>{
@@ -27,15 +26,9 @@ function ItemCount(props) {
                 }
                 }
         
-
-        const OnAdd= () => {
-                if(count !== 0)
-                alert(`Se añadieron al carrito ${count} productos`)
-              }
-
         return(
         <>
-       <div className="flex flex-col items-center">
+       <div className="mt-20 flex flex-col items-center">
         <div>
                 <button onClick={botonResta} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-3 rounded-l">
                         -
@@ -47,7 +40,7 @@ function ItemCount(props) {
                         +
                 </button>
         </div>
-        <button onClick={OnAdd} className="btn btn-secondary m-4 p-2">Agregar al carrito</button>
+        <button className="btn btn-secondary my-4 p-3" onClick={ ()=> {onAdd(count)}}>Agregar al carrito</button>
     </div>
     </>
   )
