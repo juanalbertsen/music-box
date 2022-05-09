@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {dataItems} from '../data/dataItems'
+import Hero from './Hero'
 import ItemList from './ItemList'
 
 const ItemListContainer = () => {
@@ -41,6 +42,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
+        
         <ItemList items={items}></ItemList>
     </div>
   )

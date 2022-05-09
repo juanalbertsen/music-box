@@ -6,9 +6,11 @@ function ItemDetail ({item}) {
 
   const [finalizar, setFinalizar] = useState(false)
 
-  const onAdd = (count) => { 
-    setFinalizar(true)
-    console.log(count) 
+  const onAdd = (count) => {
+    if (count >= 1) {
+      setFinalizar(true)
+      console.log(count) 
+    } 
      }
 
     return (
