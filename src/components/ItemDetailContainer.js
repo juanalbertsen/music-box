@@ -3,11 +3,14 @@ import { useParams } from 'react-router-dom'
 import { dataItems } from '../data/dataItems'
 import Item from './Item'
 import ItemDetail from './ItemDetail'
+import Spinner from './Spinner'
+
 
 
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({})
+    const [loading, setLoading] = useState(true)
 
     const {idParam} = useParams()
   
@@ -21,7 +24,8 @@ const ItemDetailContainer = () => {
           
         setTimeout(() => {
           res(dataItems)
-        }, 500);
+          setLoading(false)
+        }, 2000);
         })
   
         getItemsfromDBPromise.then( data => {
@@ -34,8 +38,11 @@ const ItemDetailContainer = () => {
     }
 
  return (
-    <ItemDetail item={item}></ItemDetail>
+      <div>
+         {loading ?  <div className='mx-auto'> <Spinner/> </div>:  <ItemDetail item={item}></ItemDetail>  }
+      </div>
  )
  
 }
+
 export default ItemDetailContainer

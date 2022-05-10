@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import {dataItems} from '../data/dataItems'
 import Hero from './Hero'
 import ItemList from './ItemList'
+import Spinner from './Spinner'
 
 const ItemListContainer = () => {
 
@@ -12,6 +13,7 @@ const ItemListContainer = () => {
   
 
   const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
      getItemsfromDB()
@@ -20,10 +22,13 @@ const ItemListContainer = () => {
   const getItemsfromDB = () => { 
       const getItemsfromDBPromise = new Promise( (res, rej) => {
         
+      setLoading(true)  
+      
       setTimeout(() => {
         res(dataItems);
         console.log('recibí los items');
-      }, 1500);
+        setLoading(false)
+      }, 1000);
       })
 
       getItemsfromDBPromise.then( data => {
@@ -41,10 +46,11 @@ const ItemListContainer = () => {
   }
 
   return (
-    <div>
+      <div>
+         {loading ?  <div className='mx-auto'> <Spinner/> </div>:  <ItemList items={items}></ItemList>  }
+      </div>
         
-        <ItemList items={items}></ItemList>
-    </div>
+   
   )
 }
 
