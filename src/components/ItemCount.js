@@ -1,11 +1,20 @@
-import React from 'react'
-import {useState} from "react";
+import React, {useContext, useState} from "react";
+import { CartContext } from "../context/CartContext";
+import { TestContext } from "../context/TestContext";
 
-function ItemCount({stock, onAdd}) {
 
-        console.log("se montó el contador")
+
+
+function ItemCount({stock, id}) {
+        
         const [count, setCount] = useState(0)
-
+        console.log("se montó el contador")
+        
+        const elcontexto = useContext(CartContext)
+        const { addToCart } = useContext(CartContext)
+        console.log(addToCart)
+        
+        console.log(elcontexto)
 
         const botonSuma = () =>{
                 console.log(stock)
@@ -26,6 +35,15 @@ function ItemCount({stock, onAdd}) {
                 }
                 }
         
+        const handleCompra = () => {
+
+                if(count >=1){
+                console.log("estoy comprando")
+                addToCart(parseInt(id),count)
+        }
+
+        }
+        
         return(
         <>
        <div className="mt-20 flex flex-col items-center">
@@ -40,7 +58,7 @@ function ItemCount({stock, onAdd}) {
                         +
                 </button>
         </div>
-        <button className="btn btn-secondary my-4 py-3 px-4" onClick={ ()=> {onAdd(count)}}>Agregar al carrito</button>
+        <button className="btn btn-secondary my-4 py-3 px-4" onClick={() => {handleCompra(id,count)}}>Agregar al carrito</button>
     </div>
     </>
   )
