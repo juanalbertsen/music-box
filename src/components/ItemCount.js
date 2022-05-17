@@ -5,7 +5,7 @@ import { TestContext } from "../context/TestContext";
 
 
 
-function ItemCount({stock, id}) {
+function ItemCount(producto) {
         
         const [count, setCount] = useState(0)
         console.log("se montó el contador")
@@ -17,8 +17,8 @@ function ItemCount({stock, id}) {
         console.log(elcontexto)
 
         const botonSuma = () =>{
-                console.log(stock)
-                if(count < stock){
+                console.log(producto.stock)
+                if(count < producto.stock){
                 console.log('se está sumando');
                 setCount(count + 1)
                 }else{
@@ -39,7 +39,7 @@ function ItemCount({stock, id}) {
 
                 if(count >=1){
                 console.log("estoy comprando")
-                addToCart(parseInt(id),count)
+                addToCart(producto,count)
         }
 
         }
@@ -58,7 +58,7 @@ function ItemCount({stock, id}) {
                         +
                 </button>
         </div>
-        <button className="btn btn-secondary my-4 py-3 px-4" onClick={() => {handleCompra(id,count)}}>Agregar al carrito</button>
+        <button className="btn btn-secondary my-4 py-3 px-4" onClick={() => {handleCompra(producto,count)}}>Agregar al carrito</button>
     </div>
     </>
   )

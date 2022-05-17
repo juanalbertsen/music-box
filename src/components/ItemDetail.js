@@ -29,7 +29,7 @@ function ItemDetail ({item}) {
       <p className="text-xs italic mx-auto my-4 text-center">El producto ya fue agregado al carrito</p>
       <Link to="/cart"className="btn btn-sm px-7">Finalizar compra</Link>
       </div> ) :
-      <ItemCount stock={item.stock} id={item.id} onAdd={onAdd}/>
+      <ItemCount producto={item} stock={item.stock} id={item.id} onAdd={onAdd}/>
     }
     </div>
   </div>

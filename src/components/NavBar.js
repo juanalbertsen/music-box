@@ -7,7 +7,7 @@ const NavBar = () => {
 <div data-theme="autumn" class="navbar bg-base-100">
   <div className="flex-1">
   <Link to={'/'}>
-    <img src="./img/musicbox-logo-12.png" className="w-20 m-3"></img>  
+    <img src="./img/musicbox-logo-12.png" className="w-20 m-3" alt="logo"></img>  
     </Link>
   </div>
   <div className="flex-none">
@@ -16,6 +16,7 @@ const NavBar = () => {
       <li><NavLink to={'/category/guitarras'}>Guitarras</NavLink></li>
       <li><NavLink to={'/category/teclados'}>Teclados</NavLink></li>
       <li><NavLink to={'/category/percusion'}>Percusión</NavLink></li>
+      <li><NavLink to={'/cart'}>Carrito</NavLink></li>
       <li>
         <Cartwidget></Cartwidget>
       </li>
