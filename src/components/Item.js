@@ -6,12 +6,6 @@ import ItemDetailContainer from './ItemDetailContainer'
 
 const Item = ({item}) => {
 
-const onClickHandler = (evt => { 
-  console.log(evt);
-  console.log("usted tocó el botón del producto", evt.target.id);
-  }
- 
-)
 
   return (
       <div data-theme="autumn" className="card w-80 bg-base-100 shadow-xl mx-auto my-4">
@@ -21,7 +15,7 @@ const onClickHandler = (evt => {
           <img src={item.imgurl} className="object-cover h-40 w-40 rounded-md"/>
           <strong>${item.price}</strong>
           <div className="flex-col card-actions items-center">
-            <Link id={item.id} className="btn btn-secondary m-4" to={`/item/${item.id}`}>Ver detalles</Link>
+            <Link id={item.id} className="btn btn-secondary m-4" to={`/item/${item.fid}`}>Ver detalles</Link>
           </div>
         </div>
       </div>

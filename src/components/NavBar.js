@@ -7,7 +7,7 @@ const NavBar = () => {
 <div data-theme="autumn" class="navbar bg-base-100">
   <div className="flex-1">
   <Link to={'/'}>
-    <img src="./img/musicbox-logo-12.png" className="w-20 m-3" alt="logo"></img>  
+    <img src="./img/musicbox-logo-12.png" className="w-20 m-3"></img>  
     </Link>
   </div>
   <div className="flex-none">

@@ -1,3 +1,5 @@
+import {collection, getFirestore} from "firebase/firestore"
+
 export const dataItems = [
     {
         id: '1',
@@ -74,6 +76,3 @@ export const dataItems = [
         imgurl:'https://media.guitarcenter.com/is/image/MMGS7/8-Concert-Triangle/J56595000000000-00-220x220.jpg'
     }
 ]
-
-
-

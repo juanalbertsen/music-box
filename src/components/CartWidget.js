@@ -15,7 +15,7 @@ const CartWidget = () => {
       return (
     <>
         <div>
-            <b><FaShoppingCart/></b>
+            <p><FaShoppingCart/></p>
             <b>{totalItems}</b>
         </div>
     </>
