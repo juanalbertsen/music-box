@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import ItemCount from './ItemCount';
+import ItemCount from './ItemCount'
+import { CartContext } from "../context/CartContext";
 
 function ItemDetail ({item}) {
 
   const [finalizar, setFinalizar] = useState(false)
+  const {isInCart} = useContext(CartContext)
 
   const onAdd = (count) => {
     if (count >= 1) {
@@ -24,7 +26,7 @@ function ItemDetail ({item}) {
     <p className="text-slate-400">Stock: {item.stock} unidades</p>
     <div className="card-actions mx-auto">
 
-      {finalizar ? (
+      {isInCart(item) ? (
       <div className="mx-auto flex-col mt-20">  
       <p className="text-xs italic mx-auto my-4 text-center">El producto ya fue agregado al carrito</p>
       <Link to="/cart"className="btn btn-sm px-7">Finalizar compra</Link>

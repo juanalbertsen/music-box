@@ -11,7 +11,7 @@ function ItemCount(producto) {
         console.log("se montó el contador")
         
         const elcontexto = useContext(CartContext)
-        const { addToCart } = useContext(CartContext)
+        const { addToCart } = useContext(CartContext) 
         console.log(addToCart)
         
         console.log(elcontexto)
@@ -35,11 +35,11 @@ function ItemCount(producto) {
                 }
                 }
         
-        const handleCompra = () => {
+        const handleCompra = (producto, count) => {
 
                 if(count >=1){
-                console.log("estoy comprando")
-                addToCart(producto,count)
+                console.log("estoy comprandoesta cantidad", count)
+                addToCart(producto, count)
         }
 
         }

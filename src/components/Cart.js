@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 import { dataItems } from '../data/dataItems'
 
@@ -33,6 +34,7 @@ console.log(hayItems)
                             </>            
                                     )}
                                     <button data-theme="autumn" className="btn btn-primary mt-10 flex mx-auto" onClick={() => {deleteCart()}} >Vaciar Carrito</button>
+                                    <Link to="/Checkout"><button data-theme="autumn" className="btn btn-secondary mt-10 flex mx-auto" >Proceder al pago</button></Link>
                         </div>
             ) : ( <h2>No tenés items</h2> )}
     </div>
