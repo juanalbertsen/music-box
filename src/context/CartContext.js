@@ -7,7 +7,7 @@ export const CartContextProvider =  ({children} ) =>  {
     //Estado para el array del carrito
 	const [cart, setCart] = useState([]);
     //Estado para el precio total
-    const [suma, setSuma] = useState(5987654); //hardcodeado porque no funcionó
+    const [suma, setSuma] = useState(0);
 
     //Validar si el item está en el carrito
     const isInCart = (producto) =>{
@@ -29,8 +29,9 @@ export const CartContextProvider =  ({children} ) =>  {
          
            
             const newTotal = suma + (producto.producto.price * count)
-            console.log("precio total ", newTotal)
-            console.log('el nuevo total almacenado en el estado:', suma) // chequear por qué no funciona!
+            setSuma(newTotal);
+            console.log("precio total ", newTotal);
+            console.log('el nuevo total almacenado en el estado:', suma); // por algun motivo no puede leer el state dentro de esta función. Pero sí lo almacena
 
             
     }
