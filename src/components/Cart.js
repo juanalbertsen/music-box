@@ -22,11 +22,11 @@ console.log(hayItems)
                             <>
                                         <hr></hr>
                             <div className="flex flex-row flex-nowrap	">
-                                <img className="w-30 h-48 max-h-48 max-w-xs" src={e.producto.producto.imgurl}></img>
+                                <img className="w-30 h-48 max-h-48 max-w-xs" src={e.producto.imgurl}></img>
                                     <ul>
-                                        <li><h2 className="text-2xl">{e.producto.producto.name}</h2></li>
+                                        <li><h2 className="text-2xl">{e.producto.name}</h2></li>
                                         <li>Cantidad: {e.cant}</li>
-                                        <li>{e.producto.producto.price}</li>
+                                        <li>{e.producto.price}</li>
                                         <button data-theme="autumn" className="btn btn-primary mt-20" onClick={() => {deleteFromCart(e.producto.producto)}}>Eliminar</button>
                                     </ul>
                             </div>

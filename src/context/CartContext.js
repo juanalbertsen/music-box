@@ -24,12 +24,10 @@ export const CartContextProvider =  ({children} ) =>  {
 	const addToCart = (producto, count) => {
         const newCart = [...cart]
 
-            console.log('viejo carrito', newCart)
-            console.log('producto a agregar', producto.producto.price)
-            setCart([...newCart, {producto, cant:count }])
-            console.log("nuevo carrito:", cart);
-            console.log('agregando ',producto.producto.price)
-            console.log('multipilicado por ',count)
+         
+            setCart([...newCart, {...producto, cant:count }])
+         
+           
             const newTotal = suma + (producto.producto.price * count)
             console.log("precio total ", newTotal)
             console.log('el nuevo total almacenado en el estado:', suma) // chequear por qué no funciona!
