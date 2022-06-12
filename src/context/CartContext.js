@@ -23,11 +23,8 @@ export const CartContextProvider =  ({children} ) =>  {
 	// Agregar item al carrito
 	const addToCart = (producto, count) => {
         const newCart = [...cart]
-
-         
+       
             setCart([...newCart, {...producto, cant:count }])
-         
-           
             const newTotal = suma + (producto.producto.price * count)
             setSuma(newTotal);
             console.log("precio total ", newTotal);
@@ -36,21 +33,29 @@ export const CartContextProvider =  ({children} ) =>  {
             
     }
 
-	const deleteFromCart = (producto) => {
+	const deleteFromCart = (producto, cantidad) => {
 		const newCart = [...cart]
         console.log("antes de filtrar", newCart)
         console.log("eliminando producto", producto.id,producto.name)
+        console.log('hago esta cuenta para establecer el total', producto.price, "por", cantidad)
+        setSuma(suma - producto.price*cantidad)
 		const deleteProduct = newCart.filter((prod) => prod.producto.id != producto.id) 
         console.log("estos son los productos que quedan", deleteProduct)//busco todos los que NO tengan el id del producto que ya no quiero.
 		setCart(deleteProduct) // establezco el nuevo cart sólo con los resultados que filtré.
         console.log("luego de borrar queda", cart)
-
-      
 	}
 
-	const deleteCart = () => setCart([])
+	const deleteCart = () => {
+        setCart([])
+        setSuma(0)
+    }
 
-
+    const totalItems = () => {
+        let cuenta = 0
+        cart.forEach(e => { cuenta = cuenta + e.cant})
+        console.log(cart)
+        return cuenta
+    }
 
   return (
     <CartContext.Provider
@@ -61,7 +66,8 @@ export const CartContextProvider =  ({children} ) =>  {
         deleteCart,
         setCart,
         isInCart,
-        suma
+        suma,
+        totalItems
     }}
 >{children}</CartContext.Provider>
   )

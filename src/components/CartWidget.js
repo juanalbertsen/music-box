@@ -5,18 +5,13 @@ import Cart from "./Cart";
 
 const CartWidget = () => {
 
-    const { cart } = useContext(CartContext)
-    let totalItems = 0;
-    
-    cart.forEach(e => { totalItems = totalItems + e.cant   
-    });
-
+    const { cart, totalItems } = useContext(CartContext)
 
       return (
     <>
-        <div>
-            <p><FaShoppingCart/></p>
-            <b>{totalItems}</b>
+        <div className="flex items-center">
+            <p className="px-1"><FaShoppingCart/></p>
+            <b>{totalItems()}</b>
         </div>
     </>
     )
