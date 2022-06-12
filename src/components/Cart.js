@@ -28,8 +28,8 @@ console.log(hayItems)
                               <thead className="h-10 text-center">
                                   <tr className="border-gray-200 border-b">
                                       <th className="text-left pl-4 text-center">Producto</th>
-                                      <th className="px-6 lg:px-16 xl:px-32 text-center">Precio</th>
-                                      <th className="px-6 md:px-2 lg:px-8 xl:px-12 text-center">Cantidad</th>
+                                      <th className="px-3 lg:px-16 xl:px-32 text-center">Precio</th>
+                                      <th className="px-3 md:px-2 lg:px-8 xl:px-12 text-center">Cantidad</th>
                                       <th></th>
                                   </tr>
                               </thead>
@@ -39,7 +39,7 @@ console.log(hayItems)
                             {cart.map(e=>
                             <tr className="border-b">
                                 <td className='flex justify-center'>
-                                  <img className="w-30 h-48 max-h-fit max-w-fit" src={e.producto.imgurl}></img>
+                                  <img className="w-1/5 h-auto " src={e.producto.imgurl}></img>
                                   <h2 className="self-center p-4">{e.producto.name}</h2>
                                 </td>
                                 <td>{e.producto.price}</td>
