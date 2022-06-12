@@ -22,7 +22,7 @@ console.log(hayItems)
                             <h1 className="text-2xl text-center	 mx-auto mb-5">Carrito</h1>
                           {/* Tabla de contenido */}
 
-                          <table className="container table-auto mx-auto">
+                          <table className="container table-auto w-4/5 mx-auto">
                     
                               {/* Nombre de columnas */}
                               <thead className="h-10 text-center">

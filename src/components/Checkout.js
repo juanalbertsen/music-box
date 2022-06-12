@@ -43,8 +43,8 @@ const sendOrder = (e) => {
   return (
     <>
       <h2 className="text-2xl text-center	 mx-auto mb-5">Checkout</h2>
-    <div className='flex flex-col md:flex-row justify-center grow-0'>
-      <div className="mx-20 w-1/6">
+    <div className='flex flex-col md:flex-row justify-center grow-0 w-4/5 mx-auto'>
+      <div className="md:mx-20 md:w-1/6">
         <h2 className='mb-2'>Resúmen de la Compra</h2>
        <div className="border border-color-black-500 p-4 rounded-md">
         <div className='flex justify-between content-around mb-2 '>
@@ -58,7 +58,7 @@ const sendOrder = (e) => {
         </div>
       </div>
     
-      <div className="flex flex-col w-2/6 mx-20">
+      <div className="flex flex-col md:w-2/6 md:mx-20">
       <h2 className='mb-2'>Datos de Facturación</h2>
       <form data-theme='autumn' className='bg-transparent'>
       <input placeholder="Nombre" onChange={handleFormChange} name="name" className="input bg-transparent border-gray-200 w-full  my-1"></input>
