@@ -37,8 +37,8 @@ console.log(hayItems)
                               <tbody className='w-full text-center'>
                             {cart.map(e=>
                             <tr className="border-b">
-                                <td className='flex justify-center'>
-                                  <img className="w-1/5 h-auto " src={e.producto.imgurl} alt="{e.producto.name}"></img>
+                                <td className='flex '>
+                                  <img className="w-20 h-20 object-contain object-center" src={e.producto.imgurl} alt="{e.producto.name}"></img>
                                   <h2 className="self-center p-4">{e.producto.name}</h2>
                                 </td>
                                 <td>{e.producto.price}</td>
