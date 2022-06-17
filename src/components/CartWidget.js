@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { CartContext } from "../context/CartContext";
-import Cart from "./Cart";
 
 const CartWidget = () => {
 
-    const { cart, totalItems } = useContext(CartContext)
+    const { totalItems } = useContext(CartContext)
 
       return (
     <>

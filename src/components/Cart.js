@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
-import { dataItems } from '../data/dataItems'
 import { FiArrowLeft } from 'react-icons/fi'
 import { BiTrash } from 'react-icons/bi'
 
@@ -11,7 +10,7 @@ const Cart = () => {
 
 const {cart, suma, deleteFromCart, deleteCart, totalItems} = useContext(CartContext)
 console.log("el context es", cart)
-const hayItems = (cart.length != 0)
+const hayItems = (cart.length !== 0)
 console.log(hayItems)
 
 
@@ -39,7 +38,7 @@ console.log(hayItems)
                             {cart.map(e=>
                             <tr className="border-b">
                                 <td className='flex justify-center'>
-                                  <img className="w-1/5 h-auto " src={e.producto.imgurl}></img>
+                                  <img className="w-1/5 h-auto " src={e.producto.imgurl} alt="{e.producto.name}"></img>
                                   <h2 className="self-center p-4">{e.producto.name}</h2>
                                 </td>
                                 <td>{e.producto.price}</td>
