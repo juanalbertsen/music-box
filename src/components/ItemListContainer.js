@@ -70,7 +70,12 @@ const ItemListContainer = () => {
 
   return (
       <div>
-         {loading ?  <div className='mx-auto'> <Spinner/> </div>:  <ItemList items={items}></ItemList>  }
+         {loading ?  <div className='mx-auto'> <Spinner/> </div> : 
+         <>
+         <Hero></Hero>
+         <ItemList items={items}></ItemList> 
+         </>
+          }
       </div>
         
    
