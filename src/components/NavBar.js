@@ -11,7 +11,8 @@ const NavBar = () => {
 <div data-theme="autumn" class=" md:navbar bg-base-100 flex flex-col content-center md:flex-row">
   <div className="flex justify-between content-center md:flex-1">
   <Link to={'/'}>
-    <img src="./img/musicbox-logo-12.png" className="w-20 m-3"></img>  
+    <img src="./img/musicbox-logo-12.png" className="hidden sm:block w-24 m-3"></img>  
+    <img src="./img/musicbox-logo-h.svg" className="sm:hidden w-40 m-3"></img>  
     </Link>
     <Link to={'/cart'} className="mt-10 md:hidden"><Cartwidget></Cartwidget></Link>
     <a onClick={()=> setVisible(!visible)} className='text-xl m-4 mt-10 md:hidden hover:cursor-pointer'><IoMenu className='border-solid'/></a>
