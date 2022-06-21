@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 
 const Hero = () => {
   return (
-    <Swiper className='w-4/5'
+    <Swiper className='w-full md:w-4/5'
       modules={[Navigation]}
       spaceBetween={50}
       slidesPerView={1}
