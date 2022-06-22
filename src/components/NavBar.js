@@ -9,10 +9,10 @@ const NavBar = () => {
 
   return (
 <div data-theme="autumn" class=" md:navbar bg-base-100 flex flex-col content-center md:flex-row">
-  <div className="flex justify-between content-center md:flex-1">
+  <div className="flex justify-between content-center md:flex-1 w-5/6">
   <Link to={'/'}>
-    <img src="./img/musicbox-logo-12.png" className="hidden sm:block w-24 m-3"></img>  
-    <img src="./img/musicbox-logo-h.svg" className="sm:hidden w-40 m-3"></img>  
+    <img src="././img/musicbox-logo-12.png" className="hidden sm:block w-24 my-5 mx-8"></img>  
+    <img src="././img/musicbox-logo-h.svg" className="sm:hidden w-40 m-3"></img>  
     </Link>
     <Link to={'/cart'} className="mt-10 md:hidden"><Cartwidget></Cartwidget></Link>
     <a onClick={()=> setVisible(!visible)} className='text-xl m-4 mt-10 md:hidden hover:cursor-pointer'><IoMenu className='border-solid'/></a>
@@ -23,7 +23,6 @@ const NavBar = () => {
       <li><NavLink to={'/category/guitarras'}>Guitarras</NavLink></li>
       <li><NavLink to={'/category/teclados'}>Teclados</NavLink></li>
       <li><NavLink to={'/category/percusion'}>Percusión</NavLink></li>
-      <li><NavLink to={'/cart'}>Carrito</NavLink></li>
       <li className="hidden md:block">
       <Link to={'/cart'}><Cartwidget></Cartwidget></Link>
       </li>

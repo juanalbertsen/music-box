@@ -21,10 +21,10 @@ const Hero = () => {
       navigation
     >
       <SwiperSlide >
-      <img className="w-full mt-4 mx-auto" src="./img/herosm.svg"></img>
+      <img className="w-full mt-4 mx-auto" src="././img/herosm.svg"></img>
       </SwiperSlide>
       <SwiperSlide>
-      <img className="w-full mt-4 mx-auto" src="./img/herosm2.svg"></img>
+      <img className="w-full mt-4 mx-auto" src="././img/herosm2.svg"></img>
       </SwiperSlide>
     </Swiper>
 

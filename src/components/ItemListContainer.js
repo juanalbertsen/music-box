@@ -26,7 +26,7 @@ const ItemListContainer = () => {
       }else if(categoryId != undefined){
         const q= query(collection(db, "Items"), where("category", "==", categoryId));
         getDocs(q).then((snapshot)=>{
-        setItems(snapshot.docs.map((doc)=> ({fid: doc.id, ...doc.data()})));      
+        setItems(snapshot.docs.map((doc)=> ({fid: doc.id, ...doc.data()})));     
         })
       }else
       setItems(snapshot.docs.map((doc)=> ({fid: doc.id, ...doc.data()})));
@@ -34,6 +34,8 @@ const ItemListContainer = () => {
       setLoading(false)
     })
     }, [categoryId])
+
+
   
 
   // useEffect(() => {
@@ -72,7 +74,6 @@ const ItemListContainer = () => {
       <div>
          {loading ?  <div className='mx-auto'> <Spinner/> </div> : 
          <>
-         <Hero></Hero>
          <ItemList items={items}></ItemList> 
          </>
           }

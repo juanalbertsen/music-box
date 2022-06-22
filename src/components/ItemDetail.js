@@ -22,6 +22,7 @@ function ItemDetail ({item}) {
   <div className="card-body rounded-md">
     <h2 className="card-title">{item.name}</h2>
     <strong>${item.price}</strong>
+    <p className='line-through text-red-600 text-xs'>${item.price*1.30}</p>
     <p>{item.detail}</p>
     <p className="text-slate-400">Stock: {item.stock} unidades</p>
     <div className="card-actions mx-auto">
